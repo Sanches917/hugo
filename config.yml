@@ -12,6 +12,10 @@ languages:
     contentDir: content/zh
     profileMode:
       enabled: true
+      imageUrl: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/The-Moon-Rotates.svg"
+      imageTitle: "图标-iconfont/金角大王"
+      imageWidth: 300
+      imageHeight: 300
       title: "学习记录blog"
       subtitle: "⛅ 词根 | ☁️ 前缀 | 🌙 后缀 | ⭐ 词典"
       buttons:
@@ -115,6 +119,13 @@ params:
   
   profileMode:
     enabled: false
+
+    assets:
+    favicon: "./static/favicon.ico"
+    favicon16x16: "./static/favicon-16x16.png"
+    favicon32x32: "./static/favicon-32x32.png"
+    apple_touch_icon: "./static/apple-touch-icon.png"
+    safari_pinned_tab: "./static/apple-touch-icon.png"
 
 markup:
   goldmark:
