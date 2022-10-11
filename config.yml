@@ -8,7 +8,7 @@ defaultContentLanguage: zh
 languages:
   zh:
     weight: 1
-    title: "月"
+    title: "oh merci"
     contentDir: content/zh
     profileMode:
       enabled: true
@@ -94,7 +94,7 @@ outputs:
 params:
   
   env: production
-  ShowShareButtons: true
+  #ShowShareButtons: true
   #ShowReadingTime: true
   displayFullLangName: true
   ShowPostNavLinks: true
@@ -108,11 +108,11 @@ params:
 
   socialIcons:
     - name: instagram
-      url: "https://instagram.com/"
+      url: "https://instagram.com/oh_merciii"
     - name: github
-      url: "https://github.com/"
-    - name: twitter
-      url: "https://twitter.com/"
+      url: "https://github.com/ohmerci"
+    - name: telegram
+      url: "https://t.me/ohmerci"
   
   profileMode:
     enabled: false
