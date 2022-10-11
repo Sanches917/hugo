@@ -71,6 +71,7 @@ languages:
   ug:
     languageName: ئۇيغۇر
     languagedirection: rtl
+    contentDir: content/ug
     weight: 4
     title: ئاي
     homeInfoParams:
