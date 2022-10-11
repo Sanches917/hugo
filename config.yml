@@ -121,11 +121,11 @@ params:
     enabled: false
 
     assets:
-    favicon: "./static/favicon.ico"
-    favicon16x16: "./static/favicon-16x16.png"
-    favicon32x32: "./static/favicon-32x32.png"
-    apple_touch_icon: "./static/apple-touch-icon.png"
-    safari_pinned_tab: "./static/apple-touch-icon.png"
+    favicon: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/favicon.ico"
+    favicon16x16: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/favicon-16x16.png"
+    favicon32x32: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/favicon-32x21.png"
+    apple_touch_icon: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/apple-touch-icon.png"
+    safari_pinned_tab: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/apple-touch-icon.png"
 
 markup:
   goldmark:
