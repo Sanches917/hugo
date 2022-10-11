@@ -1,6 +1,6 @@
 baseURL: https://ohmerci.github.io/
 languageCode: en-us
-title: Moon
+title: oh merci
 theme: PaperMod
 defaultContentLanguage: zh
 #defaultContentLanguageInSubdir: true
@@ -12,12 +12,12 @@ languages:
     contentDir: content/zh
     profileMode:
       enabled: true
-      title: "oh 谢谢"
+      title: "学习记录blog"
       subtitle: "⛅ 词根 | ☁️ 前缀 | 🌙 后缀 | ⭐ 词典"
       buttons:
-        - name: 📁文章
+        - name: "📁 文章"
           url: posts
-        - name: 📖词根字典
+        - name: "📖 词根字典"
           url: https://dictionary.com
     menu:
       main:
@@ -38,7 +38,6 @@ languages:
 
   en:
     weight: 2
-    title: oh thx
     languageName: English
     contentDir: content/en
     menu:
