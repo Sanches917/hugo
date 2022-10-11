@@ -12,10 +12,10 @@ languages:
     contentDir: content/zh
     profileMode:
       enabled: true
-      imageUrl: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/The-Moon-Rotates.svg"
-      imageTitle: "图标-iconfont/金角大王"
-      imageWidth: 300
-      imageHeight: 300
+      # imageUrl: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/The-Moon-Rotates.svg"
+      # imageTitle: "图标-iconfont/金角大王"
+      # imageWidth: 300
+      # imageHeight: 300
       title: "学习记录blog"
       subtitle: "⛅ 词根 | ☁️ 前缀 | 🌙 后缀 | ⭐ 词典"
       buttons:
@@ -121,11 +121,11 @@ params:
     enabled: false
 
     assets:
-    favicon: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/favicon.ico"
-    favicon16x16: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/favicon-16x16.png"
-    favicon32x32: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/favicon-32x21.png"
-    apple_touch_icon: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/apple-touch-icon.png"
-    safari_pinned_tab: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/apple-touch-icon.png"
+      favicon: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/favicon.ico"
+      favicon16x16: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/favicon-16x16.png"
+      favicon32x32: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/favicon-32x21.png"
+      apple_touch_icon: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/apple-touch-icon.png"
+      safari_pinned_tab: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/apple-touch-icon.png"
 
 markup:
   goldmark:
