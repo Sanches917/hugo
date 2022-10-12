@@ -48,4 +48,18 @@ summary: "笔记-词根"
   - ac- + cid =落下 + -ent = 构成名词
 - accompany vt.陪伴,陪同 伴随 为...伴奏
   - ac + com = 一起,全,加强语气 + pan = 面包
-- 
+- according adj.根据...而定的,取决于...的
+  - ac + cord = 心,核心 + -ing构成名词或形容词
+- account n.账户 账目 叙述 解释,说明 vt.认为是,视为
+  - ac + count = 数
+- accomplish vt.(尤指经过努力)完成,达成
+  - ac com plish
+- accurate adj.准确的,精准的
+  - ac+ cur = 关心 + -ate = 构成形容词
+- accuse vt.指责,指控,控告
+  - ac+cus = 原因
+- accustomed adj.习惯的,适应的 通常的
+  - ac cus tomed
+- ache vi.(持续并较强烈地)疼痛 vi.vt.渴望(且因得不到而痛苦) n.疼痛
+- achieve vt.(通过努力)达到,获得,完成 vi.成功
+- achievement n.成就,成绩 实现,达到
