@@ -1,7 +1,6 @@
 ---
 title: "词根"
 date: 2022-10-08T15:30:09+08:00
-weight: 1
 draft : false
 summary: English
 ---
