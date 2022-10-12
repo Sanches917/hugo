@@ -11,7 +11,7 @@ summary: "笔记-词根"
 
   - abi = 能够 + -ity = 构成名词：表“性质、状态”
 
-- abroad
+- abroad adv.在国外，去国外 广为流传地
 
   - a- + broad = 宽的
 
@@ -29,4 +29,6 @@ summary: "笔记-词根"
 - absolute adj.绝对的 无疑的 不受约束的 n.绝对真理
   - ab- = 远离；脱离；加强语气 + solu = 使变松
   
-- 
+- abstract adj.抽象的 抽象派的 n.抽象派艺术作品 摘要，梗概 vt.从…中分离 写…的摘要
+
+  - abs-(ab-) = 同上释义 + tract = 拉，拽
