@@ -1,6 +1,6 @@
 ---
 title: "词根"
-date: 2022-10-08T15:30:09+08:00
+date: 2022-10-10T15:30:09+08:00
 draft : false
 summary: English
 ---
