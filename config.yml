@@ -17,9 +17,13 @@ languages:
       # imageWidth: 300
       # imageHeight: 300
       title: "学习记录blog"
-      subtitle: "⛅ 词根 | ☁️ 前缀 | 🌙 后缀 | ⭐ 词典"
+      subtitle: "我喜欢的动漫:NANA;"
       buttons:
-        - name: "📁 文章"
+        - name: "⛅ 词根"
+          url: posts
+        - name: "☁️ 前缀"
+          url: posts
+        - name: "🌙 后缀"
           url: posts
         - name: "📖 词根字典"
           url: https://dictionary.com
