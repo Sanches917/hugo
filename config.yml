@@ -20,11 +20,11 @@ languages:
       subtitle: "我喜欢的动漫:n"
       buttons:
         - name: "⛅ 词根"
-          url: posts
+          url: posts/root
         - name: "☁️ 前缀"
-          url: posts
+          url: posts/prefix
         - name: "🌙 后缀"
-          url: posts
+          url: posts/suffix
         - name: "📖 词根字典"
           url: https://dictionary.com
     menu:
