@@ -55,4 +55,21 @@ date: 2022-10-16T09:09:40+08:00
 - caus = 原因
 - fore = 最早的,最先的
 - beg = 贫穷
+- hind = 后面
+- bank = 长凳;银行
+- bend = 弯曲
+- neth = 在下面
+- low = 在下面
+- bene = 好的,善的
+- fit = 做
+- bib = 书
+- cycl = 圆圈
+- birth = 生
+- bit = 食物,咬
+- blind = 瞎的
+- blo = 吹
+- boil = 煮沸
+- bond =弯曲,固定
+- board = 板子
+- born = 生
 - 
