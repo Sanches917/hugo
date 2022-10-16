@@ -17,7 +17,7 @@ date: 2022-10-16T17:51:01+08:00
 - [9](https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25698?from_spmid=666.25.episode.0&from_outer_spmid=333.337.0.0)
 - [10](https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25699?from_spmid=666.25.episode.0&from_outer_spmid=333.337.0.0)
 - [11](https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25700?from_spmid=666.25.episode.0&from_outer_spmid=333.337.0.0)
-- [11.5](https://jx.bozrc.com:4433/player/?https://www.bilibili.com/bangumi/play/ep25701?from_spmid=666.25.episode.0&from_outer_spmid=333.337.0.0)
+- [11.5](https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25701?from_spmid=666.25.episode.0&from_outer_spmid=333.337.0.0)
 - [12](https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25702?from_spmid=666.25.episode.0&from_outer_spmid=333.337.0.0)
 - [13](https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25703?from_spmid=666.25.episode.0&from_outer_spmid=333.337.0.0)
 - [14](https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25704?from_spmid=666.25.episode.0&from_outer_spmid=333.337.0.0)
