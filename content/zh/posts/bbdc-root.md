@@ -413,3 +413,7 @@ summary: "笔记-词根"
 - argue vi争吵,争论 vi.vt论证,主张 vt.证明,表明
 
 - argument n.争论 论据,理由 争议,异议
+
+- arise vi.出现,发生 由...引起 起身
+
+- argue vi.争吵,争论 vi.vt.论证,主张

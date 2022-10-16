@@ -17,7 +17,7 @@ languages:
       # imageWidth: 300
       # imageHeight: 300
       title: "学习记录blog"
-      subtitle: "我喜欢的动漫:NANA;"
+      subtitle: "我喜欢的动漫:n"
       buttons:
         - name: "⛅ 词根"
           url: posts
