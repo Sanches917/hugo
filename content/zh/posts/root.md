@@ -46,3 +46,12 @@ date: 2022-10-16T09:09:40+08:00
 - bak = 烤,烘培
 - balance = 平衡
 - ball = 球
+- bar = 长木条
+- bare = 赤裸的
+- bas = 底部
+- bat = 打击
+- bath = 洗澡
+- bear = 承受;生
+- caus = 原因
+- fore = 最早的,最先的
+- beg = 贫穷
