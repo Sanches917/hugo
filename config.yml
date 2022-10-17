@@ -17,8 +17,9 @@ languages:
       # imageWidth: 300
       # imageHeight: 300
       title: "学习记录blog"
-      subtitle: 
+      subtitle: >
         海底月是天上月
+        우리 함께 구름위로
       buttons:
         - name: "⛅ 词根"
           url: posts/root
