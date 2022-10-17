@@ -17,7 +17,7 @@ languages:
       # imageWidth: 300
       # imageHeight: 300
       title: "学习记录blog"
-      subtitle: " SUBTITLE"
+      subtitle: "海底月是天上月"
       buttons:
         - name: "⛅ 词根"
           url: posts/root
@@ -55,7 +55,7 @@ languages:
           weight: 10
     homeInfoParams:
       Title: "PaperMod"
-      Content: >
+      Content: |
           Welcome to demo of hugo's theme PaperMod.
 
           - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
