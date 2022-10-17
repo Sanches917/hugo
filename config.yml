@@ -17,7 +17,8 @@ languages:
       # imageWidth: 300
       # imageHeight: 300
       title: "学习记录blog"
-      subtitle: "海底月是天上月"
+      subtitle: 
+        海底月是天上月
       buttons:
         - name: "⛅ 词根"
           url: posts/root
@@ -55,14 +56,14 @@ languages:
           weight: 10
     homeInfoParams:
       Title: "PaperMod"
-      Content: |
-          Welcome to demo of hugo's theme PaperMod.
+      Content: >
+        Welcome to demo of hugo's theme PaperMod.
 
-          - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
+        - **PaperMod** is a simple but fast and responsive theme with useful feature-set that enhances UX.
 
-          - Do give a 🌟 on Github !
+        - Do give a 🌟 on Github !
 
-          - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
+        - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
 
   fr:
     languageName: Français
