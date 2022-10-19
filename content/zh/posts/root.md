@@ -72,4 +72,12 @@ date: 2022-10-16T09:09:40+08:00
 - bond =弯曲,固定
 - board = 板子
 - born = 生
-- 
+- bo = 球,球形
+- brand = 烧
+- brief = 短的
+- broad = 宽的
+- burst = 突然碎裂
+- burn = 燃烧
+- cook = 烹饪
+- calc = 石头;估算
+- call = 叫
