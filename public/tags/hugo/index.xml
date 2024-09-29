@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hugo on oh merci</title>
+    <link>https://ohmerci.github.io/tags/hugo/</link>
+    <description>Recent content in Hugo on oh merci</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Wed, 12 Oct 2022 12:09:14 +0800</lastBuildDate><atom:link href="https://ohmerci.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo</title>
+      <link>https://ohmerci.github.io/posts/hugo/</link>
+      <pubDate>Wed, 12 Oct 2022 12:09:14 +0800</pubDate>
+      
+      <guid>https://ohmerci.github.io/posts/hugo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>oh merci</title>
+    <link>https://ohmerci.github.io/</link>
+    <description>Recent content on oh merci</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 30 Sep 2024 02:17:37 +0800</lastBuildDate><atom:link href="https://ohmerci.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Typora Cracker</title>
+      <link>https://ohmerci.github.io/posts/typoracracker/</link>
+      <pubDate>Mon, 30 Sep 2024 02:17:37 +0800</pubDate>
+      
+      <guid>https://ohmerci.github.io/posts/typoracracker/</guid>
+      <description>&lt;h1 id=&#34;typora激活记录&#34;&gt;Typora激活记录&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;纯属学习记录，不提供任何服务&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;针对不同版本，大致有四种方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自行修改&lt;code&gt;License.js&lt;/code&gt;文件的时间戳 （v0.11.18以下）&lt;/li&gt;
+&lt;li&gt;替换&lt;code&gt;License.js&lt;/code&gt;文件(v1.0.0~v1.0.3)&lt;/li&gt;
+&lt;li&gt;替换软件根目录&lt;code&gt;Winmm.dll&lt;/code&gt;文件 (?~v1.8.10)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;node_inject.exe&lt;/code&gt;注入，配合&lt;code&gt;license-gen.exe&lt;/code&gt;或&lt;code&gt;keygen.js&lt;/code&gt; (?~v1.9.5)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;方法一修改时间戳适用于未收费时期版本&#34;&gt;方法一：修改时间戳（适用于未收费时期版本）&lt;/h2&gt;
+&lt;p&gt;思路&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.52pojie.cn/thread-1553967-1-1.html&#34;&gt;Typora 授权解密与剖析&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参阅&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Mas0nShi/typoraCracker&#34;&gt;&lt;del&gt;Mas0nShi/typoraCracker&lt;/del&gt;&lt;/a&gt;(已删库)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;所需环境&#34;&gt;所需环境&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Python3&lt;/li&gt;
+&lt;li&gt;Node.js&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;步骤&#34;&gt;步骤&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;安装对应版本的Typora&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;找到Typora安装目录下的app.asar文件&lt;code&gt;X:\Program Files\Typora\resources\app.asar&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Git或下载TyporaCracker&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入文件夹根目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd typoracracker
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;安装依赖&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pip install &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;r requirements&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;txt
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;解包Typora的app.asar文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python typora&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;py &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;X:\Program Files\Typora&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;esources&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\a&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;pp.asar&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;打开解包的&lt;code&gt;.\dec_app\License.js&lt;/code&gt;文件，将所有时间戳&lt;code&gt;1637934234708&lt;/code&gt;修改为未来的时间&lt;code&gt;4033667395000&lt;/code&gt;（时间戳单位是毫秒）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打包&lt;code&gt;app.asar&lt;/code&gt;文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python typora&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;py &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;u &lt;span style=&#34;color:#f92672&#34;&gt;./&lt;/span&gt;dec_app&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;替换&lt;code&gt;app.asar&lt;/code&gt;文件&lt;/li&gt;
+&lt;li&gt;在typoracracker文件夹下，打开Terminal生成序列号&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;node ./keygen.js
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;随便填入邮箱，再将序列号填入即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;方法二替换licensejs文件&#34;&gt;方法二：替换&lt;code&gt;License.js&lt;/code&gt;文件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;修改时间戳那一步，改为将example下的&lt;code&gt;License.js&lt;/code&gt;替换进dec_app文件夹下，其余操作与方法一相同，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;方法三替换winmmdll文件&#34;&gt;方法三：替换&lt;code&gt;Winmm.DLL&lt;/code&gt;文件&lt;/h2&gt;
+&lt;p&gt;参阅&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/markyin0707/typora-activation&#34;&gt;typora-activation&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;下载&lt;code&gt;winmm.dll&lt;/code&gt;,将其放入Typora安装根目录下即可&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;此方法Microsoft Defender可能会报毒，自行斟酌&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;方法四node注入&#34;&gt;方法四：node注入&lt;/h2&gt;
+&lt;p&gt;参阅&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/AWDSCAN/Typora&#34;&gt;AWDSCAN/Typora&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/DiamondHunters/NodeInject&#34;&gt;NodeInject&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/DiamondHunters/NodeInject_Hook_example&#34;&gt;NodeInject_Hook_example&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/74875840&#34;&gt;Rust : 解决 Cargo 下载依赖时卡住的办法 - 知乎 (zhihu.com)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如需自己编译Nodeject需安装rust与VS&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Elena_vibe</title>
+      <link>https://ohmerci.github.io/posts/elena-vibe/</link>
+      <pubDate>Tue, 18 Oct 2022 20:38:53 +0800</pubDate>
+      
+      <guid>https://ohmerci.github.io/posts/elena-vibe/</guid>
+      <description>&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;album&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;cover&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;album&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;cover&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=3319150&#34;&gt;Mess&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=3319150&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/nlyU992DvSifNljW17wUZQ==/109951163259034610.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=75226531&#34;&gt;Ivy To Roses (Mixtape)&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=75226531&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/qHS1Jx9XRqCdpG3-wRqtwg==/109951163921528599.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=74872310&#34;&gt;No Plans&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=74872310&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/tssVttk9FhyqDDkn19aHJg==/109951165985442403.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=71856665&#34;&gt;History&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=71856665&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/jQhN2zo030rijq234SjZ2A==/109951163410249948.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=86827685&#34;&gt;Future Nostalgia&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=86827685&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/oYxxIkeXY5Qap7pW1aSzqQ==/109951165389077755.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=37561119&#34;&gt;Faded Love&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=37561119&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/9_ZTUTjSMLZEqd9CtDDx9g==/109951165983396109.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=3295555&#34;&gt;Delirium&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=3295555&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/7deg2d350EGJ2Y8TzIPGMw==/109951166006469869.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=123144344&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/lqXw-beaZoTfvsWy5t228A==/109951165796974448.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=38513012&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/yNSw3steQSPGqxAStaJhaA==/109951163270068097.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=37728744&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/df8MhUmmxwNOTcuBX824jA==/109951163159695946.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=99013655&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/ToVCE5qbTAjdU-73dWIAOw==/109951165513303034.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=39791361&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/I4xRY1Nd46fygwWIRY63DA==/109951163381683537.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=3287551&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/vT4-o2BvsVMKrLn3dvC5FA==/109951164217009840.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=80235962&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/Md3WvtYm5qOFyB02NpiOaA==/109951164194186517.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=1602605&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/RB5dE6hlMVdVEa_aorVOiw==/109951166048804451.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=132741110&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/hsiiJ_ZffL8rneDJc7oc1Q==/109951166353211305.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=91720867&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/7QQmLDI1wgOapW1AzkPMEw==/109951165099694316.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=128413496&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/zsFXZ93-m6BeZW8cAlf0Rg==/109951166055354957.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=80429159&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/7FbZZozfzjNphJJ8j_6poA==/109951164499210405.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=135102061&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/cdzfCKehDcPPxgaZ_Y0-QQ==/109951166543375327.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=91177571&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/_1pXrmDqMNbe0INgcE0ErA==/109951165071843334.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=36701039&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/MOK4FUwQS3lyA9dJ5xlywQ==/18853325881512542.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=92048007&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/Pqv23rPJZZEdbHDH-ah4hA==/109951165118506255.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=80726478&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/hD5y_IApslHAvXC_UCT65Q==/109951165186528611.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=36868130&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/5zIRSui4uSmPZ0alIh-vCg==/109951163450981680.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=38330482&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/mIbrbuMDz9BKdeegRCzHlw==/109951163244338338.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=137417547&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/ixtF8GHOXno5Owsye3pTGQ==/109951167249966308.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=34784666&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/EU68PX9VgTksBCEbnuEX7Q==/18166131114843569.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=143182246&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/ZSCAk8Xw3JqZRFWWXpX65w==/109951167260917417.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=85537640&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/xJR89fELCuUwtmcboS3dAg==/109951164683166184.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=145705581&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/WOXdKmmuR5ripVmN7YaUZw==/109951167497272500.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=96032861&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/rcl5L7bYImGARJUhItH1mA==/109951165348178286.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=146139802&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/gK1v_Y2WiO3SnSZaAGPCTA==/109951167523300764.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=86755720&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/dIvTuRX1fg2nA5O-WwUMKA==/109951164866561147.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://github.com/ohmerci/ohmerci.github.io/raw/main/static/unknow.jpg&#34; alt=&#34;unknown&#34;  /&gt;
+&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=140254130&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/hryK4IxJsgyY0EhAxDdycA==/109951167038784928.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=128603407&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/U95-cYf90N-CYjaREwz_sQ==/109951166069865592.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=129106399&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/m7IVzWrcSykpcwfbWXkS_Q==/109951166092380690.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=144912694&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/tFv2HaAosP5YBfHCkJq9wg==/109951167481735108.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=89046362&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/e6GOFtxRMYFq81rMn11oCg==/109951164983079534.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=80048992&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/8Ko_C05tQvGYZFZQircEbA==/109951164177475658.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=80931011&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/_RLnbmlNulm4x0l8uRQ1FQ==/109951165186527164.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=144352933&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/iQRnwQeZgvDa4psNWhyR7Q==/109951167378397207.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=124955341&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/MJQuXesdMThskbbTFMl0vA==/109951165827212504.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=86281050&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/bi30VVe5Ef3rbBBok-aqPA==/109951164775261500.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=79190754&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/GlAoswYyczXw_I6n6L1sdg==/109951165986564278.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=136022008&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/n532gk70w7WFdcDAmVQasw==/109951166631361715.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=74039234&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/FXupciFviI_4UawjTM3GRA==/109951163623709372.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=130630757&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/c3diooFPO6lJs-7BQCuM6A==/109951166196883773.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=35338681&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/3YZ49P8ypqh71-09G5EkWA==/109951165895891401.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=72015396&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/hFKgE1OcyvibwrtLJuZQ1w==/109951165984655844.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=37398433&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/b57lPr9hBhxXAEB4LgcGCw==/109951166008189880.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=80621270&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/Qj11jVMFwQ_AefCMMl9pYw==/109951164240988634.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=121269595&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/HHbPeTLzrbiFbgcVMxV9KA==/109951165610535031.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=78339336&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/cxlFwgtN8W8wmpGSZ6656Q==/109951163977322804.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=95303938&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/NBlh7xHctsiQs5GUqkJAiA==/109951165313945379.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=35746012&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/C8_aBkoVlfCySjOCPdw74Q==/109951167720799451.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=122681189&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/z7_3Pd0NfAfBgWtCYLFWTQ==/109951165954526489.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=130965370&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/CKWyX_q5nqUEIZ8DE-BUyQ==/109951166221677689.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=85408630&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/egs4kKrE53FhFVZheQ7KvA==/109951164670948031.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=79137283&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/fJfP3u7gpwegPlruQ8kviQ==/109951164075947039.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=95850666&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/yEmhzUsjCzMUZLCo2640Hg==/109951165339217554.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=134452373&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p2.music.126.net/SELca2rh7Y2jB_3Q_UyYqg==/109951166501256926.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=134442043&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/UeoOVeXEEOpesAW7AftNOQ==/109951166534900069.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=86109332&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/ixYjrisyRCVtdfQopn6iIA==/109951167966448981.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=147997410&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/tg7z66J_k3uYm06R8gAg_Q==/109951167661501499.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=147018688&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/BVM_aQVxctlj_aBGzmhdMQ==/109951167583840530.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=3263832&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/V1J43nM9w0Mpfk0ytcz4LA==/7882398860685949.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=140795790&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/bgkm8T2eLuUqaWkFQ7rSuA==/109951167081109902.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=34468010&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/KxEeu7pFQznPck05OvMm3A==/109951164417376699.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=125495418&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/OKsLtqFlsgoWoOFDw0suJQ==/109951165854335761.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;a href=&#34;https://music.163.com/album?id=75551114&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://p1.music.126.net/P2jH_eG27sI3mpt91c0PYA==/109951166026392482.jpg?param=180y180&#34; alt=&#34;img&#34;  /&gt;
+&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</description>
+    </item>
+    
+    <item>
+      <title>Mp3tag使用iTunes API获取歌曲信息</title>
+      <link>https://ohmerci.github.io/posts/mp3tag/</link>
+      <pubDate>Mon, 17 Oct 2022 23:55:56 +0800</pubDate>
+      
+      <guid>https://ohmerci.github.io/posts/mp3tag/</guid>
+      <description>&lt;p&gt;本文章具有时效性&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Nana</title>
+      <link>https://ohmerci.github.io/posts/nana/</link>
+      <pubDate>Sun, 16 Oct 2022 17:51:01 +0800</pubDate>
+      
+      <guid>https://ohmerci.github.io/posts/nana/</guid>
+      <description>&lt;h3 id=&#34;电影&#34;&gt;电影&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep385271?theme=movie&amp;spm_id_from=333.337.0.0&#34;&gt;NANA1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://film.sohu.com/album/9743123.html?txid=7ada969851fd73090f44b01fee5b798c&#34;&gt;NANA2&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;番剧&#34;&gt;番剧&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25691?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25692?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25693?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25694?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25695?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25696?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;7&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25697?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25698?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;9&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25699?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;10&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25700?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;11&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25701?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;11.5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25702?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;12&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25703?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;13&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25704?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;14&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25705?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;15&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25706?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;16&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25707?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;17&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25708?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;18&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25709?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;19&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25710?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;20&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25711?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;21&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25712?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;21.5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25713?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;22&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25714?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;23&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25715?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;24&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25716?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;25&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25717?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;26&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25718?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;27&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25719?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;28&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25720?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;29&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25721?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;30&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25722?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;31&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25723?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;32&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25724?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;33&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25725?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;34&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25726?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;35&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25727?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;36&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25728?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;36.5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25729?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;37&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25730?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;38&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25731?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;39&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25732?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;40&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25733?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;41&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25734?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;42&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25735?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;43&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25736?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;44&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25737?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;45&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25738?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;46&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jx.bozrc.com:4433/player/?url=https://www.bilibili.com/bangumi/play/ep25739?from_spmid=666.25.episode.0&amp;from_outer_spmid=333.337.0.0&#34;&gt;47&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>后缀</title>
+      <link>https://ohmerci.github.io/posts/suffix/</link>
+      <pubDate>Sun, 16 Oct 2022 09:09:47 +0800</pubDate>
+      
+      <guid>https://ohmerci.github.io/posts/suffix/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;-ic = 构成形容词&lt;/li&gt;
+&lt;li&gt;-y = 构成名词:表&amp;quot;状态,性质&amp;quot;&lt;/li&gt;
+&lt;li&gt;-ent  构成形容词&lt;/li&gt;
+&lt;li&gt;-ate = 构成形容词&lt;/li&gt;
+&lt;li&gt;-al = 构成形容词&lt;/li&gt;
+&lt;li&gt;-ist = 构成人称名词及相关形容词&lt;/li&gt;
+&lt;li&gt;-ment = 构成抽象名词&lt;/li&gt;
+&lt;li&gt;-ant = 构成名词: 动作执行者&lt;/li&gt;
+&lt;li&gt;-ate = 构成动词&lt;/li&gt;
+&lt;li&gt;-ion = 构成名词: 表&amp;quot;动作,状态&amp;quot;等&lt;/li&gt;
+&lt;li&gt;-ish = 构成形容词,名词和动词&lt;/li&gt;
+&lt;li&gt;-tude = 构成抽象名词&lt;/li&gt;
+&lt;li&gt;-ive = 构成形容词或名词&lt;/li&gt;
+&lt;li&gt;-ence = 构成抽象名词&lt;/li&gt;
+&lt;li&gt;-or = 构成抽象名词或人&lt;/li&gt;
+&lt;li&gt;-ity = 构成名词:表&amp;quot;状态,性质&amp;quot;等&lt;/li&gt;
+&lt;li&gt;-ic = 构成形容词&lt;/li&gt;
+&lt;li&gt;-able = 构成形容词:能&amp;hellip;的;易&amp;hellip;的&lt;/li&gt;
+&lt;li&gt;age = 构成名词:表&amp;quot;状态,行为&amp;quot;等&lt;/li&gt;
+&lt;li&gt;-oon = 构成名词&lt;/li&gt;
+&lt;li&gt;-er = 构成名词: 动作执行者&lt;/li&gt;
+&lt;li&gt;-ology = 构成名词:&amp;hellip;学&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>前缀</title>
+      <link>https://ohmerci.github.io/posts/prefix/</link>
+      <pubDate>Sun, 16 Oct 2022 09:09:44 +0800</pubDate>
+      
+      <guid>https://ohmerci.github.io/posts/prefix/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;a- as- ar- ap- at- (ad-) = 朝着;靠近;加强语气&lt;/li&gt;
+&lt;li&gt;a- = 处于某种状况,在&lt;/li&gt;
+&lt;li&gt;a- = 表示否定&lt;/li&gt;
+&lt;li&gt;att = 合适的&lt;/li&gt;
+&lt;li&gt;aud = 听&lt;/li&gt;
+&lt;li&gt;aug = 增长&lt;/li&gt;
+&lt;li&gt;be - = (into) 使得&amp;hellip;;把&amp;hellip;视作&lt;/li&gt;
+&lt;li&gt;bi- = 二&lt;/li&gt;
+&lt;li&gt;bio- = 生命&lt;/li&gt;
+&lt;li&gt;cap = 头部&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Root</title>
+      <link>https://ohmerci.github.io/posts/root/</link>
+      <pubDate>Sun, 16 Oct 2022 09:09:40 +0800</pubDate>
+      
+      <guid>https://ohmerci.github.io/posts/root/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;arithm = 数学&lt;/li&gt;
+&lt;li&gt;proach = 附近&lt;/li&gt;
+&lt;li&gt;arm = 武器&lt;/li&gt;
+&lt;li&gt;par = 出现&lt;/li&gt;
+&lt;li&gt;rise = 上升,升起&lt;/li&gt;
+&lt;li&gt;prox = 附近&lt;/li&gt;
+&lt;li&gt;preci = 价格&lt;/li&gt;
+&lt;li&gt;round = 周围&lt;/li&gt;
+&lt;li&gt;rous = 搅和&lt;/li&gt;
+&lt;li&gt;rang = 排列&lt;/li&gt;
+&lt;li&gt;arc = 弧&lt;/li&gt;
+&lt;li&gt;art = 技术,技艺&lt;/li&gt;
+&lt;li&gt;fic = 做&lt;/li&gt;
+&lt;li&gt;side = 一边,一面&lt;/li&gt;
+&lt;li&gt;spect = 看&lt;/li&gt;
+&lt;li&gt;sembl = 相同,相等&lt;/li&gt;
+&lt;li&gt;sign = 标志&lt;/li&gt;
+&lt;li&gt;sist = 站立&lt;/li&gt;
+&lt;li&gt;soci = 社会;关联,联系&lt;/li&gt;
+&lt;li&gt;sum = 拿去,使用&lt;/li&gt;
+&lt;li&gt;sur = 确定的,确保的&lt;/li&gt;
+&lt;li&gt;asto = 使震惊&lt;/li&gt;
+&lt;li&gt;astr = 星星&lt;/li&gt;
+&lt;li&gt;nau = 海&lt;/li&gt;
+&lt;li&gt;atla = 泰坦&lt;/li&gt;
+&lt;li&gt;atmo = 气,蒸汽&lt;/li&gt;
+&lt;li&gt;spher = 球形&lt;/li&gt;
+&lt;li&gt;tom = 切,砍&lt;/li&gt;
+&lt;li&gt;tach tack = 固定&lt;/li&gt;
+&lt;li&gt;tempt = 尝试&lt;/li&gt;
+&lt;li&gt;tend tent = 伸展&lt;/li&gt;
+&lt;li&gt;tract = 拉, 拽&lt;/li&gt;
+&lt;li&gt;auth = 创造&lt;/li&gt;
+&lt;li&gt;auto = 自己&lt;/li&gt;
+&lt;li&gt;mob = 移动&lt;/li&gt;
+&lt;li&gt;vail = 价值&lt;/li&gt;
+&lt;li&gt;ven = 来&lt;/li&gt;
+&lt;li&gt;void = 空的&lt;/li&gt;
+&lt;li&gt;wake = 醒着&lt;/li&gt;
+&lt;li&gt;ware = 小心,意识到&lt;/li&gt;
+&lt;li&gt;bak = 烤,烘培&lt;/li&gt;
+&lt;li&gt;balance = 平衡&lt;/li&gt;
+&lt;li&gt;ball = 球&lt;/li&gt;
+&lt;li&gt;bar = 长木条&lt;/li&gt;
+&lt;li&gt;bare = 赤裸的&lt;/li&gt;
+&lt;li&gt;bas = 底部&lt;/li&gt;
+&lt;li&gt;bat = 打击&lt;/li&gt;
+&lt;li&gt;bath = 洗澡&lt;/li&gt;
+&lt;li&gt;bear = 承受;生&lt;/li&gt;
+&lt;li&gt;caus = 原因&lt;/li&gt;
+&lt;li&gt;fore = 最早的,最先的&lt;/li&gt;
+&lt;li&gt;beg = 贫穷&lt;/li&gt;
+&lt;li&gt;hind = 后面&lt;/li&gt;
+&lt;li&gt;bank = 长凳;银行&lt;/li&gt;
+&lt;li&gt;bend = 弯曲&lt;/li&gt;
+&lt;li&gt;neth = 在下面&lt;/li&gt;
+&lt;li&gt;low = 在下面&lt;/li&gt;
+&lt;li&gt;bene = 好的,善的&lt;/li&gt;
+&lt;li&gt;fit = 做&lt;/li&gt;
+&lt;li&gt;bib = 书&lt;/li&gt;
+&lt;li&gt;cycl = 圆圈&lt;/li&gt;
+&lt;li&gt;birth = 生&lt;/li&gt;
+&lt;li&gt;bit = 食物,咬&lt;/li&gt;
+&lt;li&gt;blind = 瞎的&lt;/li&gt;
+&lt;li&gt;blo = 吹&lt;/li&gt;
+&lt;li&gt;boil = 煮沸&lt;/li&gt;
+&lt;li&gt;bond =弯曲,固定&lt;/li&gt;
+&lt;li&gt;board = 板子&lt;/li&gt;
+&lt;li&gt;born = 生&lt;/li&gt;
+&lt;li&gt;bo = 球,球形&lt;/li&gt;
+&lt;li&gt;brand = 烧&lt;/li&gt;
+&lt;li&gt;brief = 短的&lt;/li&gt;
+&lt;li&gt;broad = 宽的&lt;/li&gt;
+&lt;li&gt;burst = 突然碎裂&lt;/li&gt;
+&lt;li&gt;burn = 燃烧&lt;/li&gt;
+&lt;li&gt;cook = 烹饪&lt;/li&gt;
+&lt;li&gt;calc = 石头;估算&lt;/li&gt;
+&lt;li&gt;call = 叫&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>英语直播笔记</title>
+      <link>https://ohmerci.github.io/posts/2021-writing/</link>
+      <pubDate>Thu, 13 Oct 2022 18:59:07 +0800</pubDate>
+      
+      <guid>https://ohmerci.github.io/posts/2021-writing/</guid>
+      <description>主要是写作范文</description>
+    </item>
+    
+    <item>
+      <title>不背单词笔记</title>
+      <link>https://ohmerci.github.io/posts/bbdc-root/</link>
+      <pubDate>Wed, 12 Oct 2022 21:53:00 +0800</pubDate>
+      
+      <guid>https://ohmerci.github.io/posts/bbdc-root/</guid>
+      <description>笔记-词根</description>
+    </item>
+    
+    <item>
+      <title>用wsa在windows11上背单词</title>
+      <link>https://ohmerci.github.io/posts/wsa/</link>
+      <pubDate>Wed, 12 Oct 2022 12:40:00 +0800</pubDate>
+      
+      <guid>https://ohmerci.github.io/posts/wsa/</guid>
+      <description>记一些wsa安装过程</description>
+    </item>
+    
+    <item>
+      <title>不背单词自定义词书</title>
+      <link>https://ohmerci.github.io/posts/bbdc/</link>
+      <pubDate>Wed, 12 Oct 2022 12:26:49 +0800</pubDate>
+      
+      <guid>https://ohmerci.github.io/posts/bbdc/</guid>
+      <description>自定义词书</description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://ohmerci.github.io/posts/hugo/</link>
+      <pubDate>Wed, 12 Oct 2022 12:09:14 +0800</pubDate>
+      
+      <guid>https://ohmerci.github.io/posts/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>词根</title>
+      <link>https://ohmerci.github.io/posts/root-bd/</link>
+      <pubDate>Mon, 10 Oct 2022 15:30:09 +0800</pubDate>
+      
+      <guid>https://ohmerci.github.io/posts/root-bd/</guid>
+      <description>English</description>
+    </item>
+    
+    <item>
+      <title>第一篇文章</title>
+      <link>https://ohmerci.github.io/posts/first-post/</link>
+      <pubDate>Sun, 09 Oct 2022 13:38:59 +0800</pubDate>
+      
+      <guid>https://ohmerci.github.io/posts/first-post/</guid>
+      <description>&lt;h1 id=&#34;heading&#34;&gt;🌘🌗🌖🌕🌔🌓🌒🌑&lt;/h1&gt;</description>
+    </item>
+    
+    
+    
+  </channel>
+</rss>
