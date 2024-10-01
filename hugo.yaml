@@ -27,8 +27,8 @@ languages:
           url: posts/prefix
         - name: "🌙 后缀"
           url: posts/suffix
-        - name: "📖 词根字典"
-          url: https://dictionary.com
+        - name: "🌕 oh dra"
+          url: https://ohdra.neocities.org/
     menu:
       main:
         - name: "归档"
