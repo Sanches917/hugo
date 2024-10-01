@@ -77,7 +77,7 @@ languages:
       profileMode:
         enabled: true
         title: "j'aime la lune"
-      
+
   ug:
     languageName: ئۇيغۇر
     languagedirection: rtl
@@ -89,12 +89,12 @@ languages:
       Content: مەن شىنجاڭنى ياخشى كۆرىمەن
     menu:
       main:
-      - name: "　　　　　"
-        url: ../fr/archives/
+        - name: "　　　　　"
+          url: ../fr/archives/
     params:
       profileMode:
         enabled: false
-  
+
 outputs:
   home:
     - HTML
@@ -102,7 +102,6 @@ outputs:
     - JSON
 
 params:
-  
   env: production
   #ShowShareButtons: true
   #ShowReadingTime: true
@@ -123,7 +122,7 @@ params:
       url: "https://github.com/ohmerci"
     - name: telegram
       url: "https://t.me/ohmerci"
-  
+
   profileMode:
     enabled: false
 
