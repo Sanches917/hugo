@@ -11,7 +11,7 @@ languages:
     title: "oh merci"
     contentDir: content/zh
     profileMode:
-      enabled: ture
+      enabled: true
       # imageUrl: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/The-Moon-Rotates.svg"
       # imageTitle: "图标-iconfont/金角大王"
       # imageWidth: 300
