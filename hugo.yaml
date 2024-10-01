@@ -10,25 +10,26 @@ languages:
     weight: 1
     title: "oh merci"
     contentDir: content/zh
-    profileMode:
-      enabled: true
-      # imageUrl: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/The-Moon-Rotates.svg"
-      # imageTitle: "图标-iconfont/金角大王"
-      # imageWidth: 300
-      # imageHeight: 300
-      title: "学习记录blog"
-      subtitle: >
-        海底月是天上月
-        우리 함께 구름위로
-      buttons:
-        - name: "⛅ 词根"
-          url: posts/root
-        - name: "☁️ 前缀"
-          url: posts/prefix
-        - name: "🌙 后缀"
-          url: posts/suffix
-        - name: "🌕 oh dra"
-          url: https://ohdra.neocities.org/
+    params:
+      profileMode:
+        enabled: true
+        # imageUrl: "https://raw.githubusercontent.com/ohmerci/For-Picgo/main/img/The-Moon-Rotates.svg"
+        # imageTitle: "图标-iconfont/金角大王"
+        # imageWidth: 300
+        # imageHeight: 300
+        title: "学习记录blog"
+        subtitle: >
+          海底月是天上月
+          우리 함께 구름위로
+        buttons:
+          - name: "⛅ 词根"
+            url: posts/root
+          - name: "☁️ 前缀"
+            url: posts/prefix
+          - name: "🌙 后缀"
+            url: posts/suffix
+          - name: "🌕 oh dra"
+            url: https://ohdra.neocities.org/
     menu:
       main:
         - name: "归档"
@@ -73,9 +74,9 @@ languages:
     contentDir: content/fr
     params:
       socialIcons:
-    profileMode:
-      enabled: true
-      title: "j'aime la lune"
+      profileMode:
+        enabled: true
+        title: "j'aime la lune"
       
   ug:
     languageName: ئۇيغۇر
