@@ -68,7 +68,7 @@ languages:
         - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper).
 
   fr:
-    disabled: true
+    disabled: false
     languageName: Français
     title: oh merci
     weight: 3
